@@ -1,0 +1,82 @@
+[
+  {
+    "id": "vercel-overview",
+    "text": "VercelはNext.jsの開発元が運営するホスティングサービス。フロントエンドのデプロイに特化していて、git pushするだけで自動ビルド・デプロイされる。プレビューURLが毎回発行されるのでPRレビューが楽。Hobbyプラン（無料）で個人プロジェクトは十分動く。商用利用にはProプラン（月$20）が必要。",
+    "metadata": { "service": "Vercel", "category": "hosting", "pricing": "free-tier-available" }
+  },
+  {
+    "id": "vercel-serverless",
+    "text": "VercelのServerless Functionsはapi/ディレクトリにファイルを置くだけでAPIエンドポイントが作れる。Node.js、Python、Go、Rubyに対応。コールドスタートが発生するので、常時接続が必要なWebSocketやリアルタイム処理には向かない。実行時間の上限はHobbyで10秒、Proで60秒。",
+    "metadata": { "service": "Vercel", "category": "serverless", "pricing": "free-tier-available" }
+  },
+  {
+    "id": "cloudflare-pages",
+    "text": "Cloudflare Pagesは静的サイトのホスティングが完全無料。帯域制限なし、リクエスト数制限なし。Cloudflare Workersと組み合わせるとサーバーサイド処理もエッジで実行できる。ビルド時間がVercelより遅いことがあるが、配信速度はCloudflareのCDNが世界最速クラス。",
+    "metadata": { "service": "Cloudflare Pages", "category": "hosting", "pricing": "free" }
+  },
+  {
+    "id": "cloudflare-workers",
+    "text": "Cloudflare WorkersはエッジコンピューティングのFaaS。V8エンジンで動くのでNode.jsのAPIがすべて使えるわけではない。無料枠は1日10万リクエスト、有料プラン（月$5）で1000万リクエスト。レスポンスが世界中のエッジから返るので、東京からもサンフランシスコからも速い。KV、D1（SQLite）、R2（S3互換ストレージ）と組み合わせるとフルスタックアプリが作れる。",
+    "metadata": { "service": "Cloudflare Workers", "category": "edge-computing", "pricing": "free-tier-available" }
+  },
+  {
+    "id": "netlify-overview",
+    "text": "NetlifyはJamstackの先駆者的ホスティング。静的サイト、SPA、SSRに対応。フォーム処理、認証、サーバレス関数が組み込みで使える。無料枠は月100GBの帯域と300分のビルド時間。Vercelと比較されることが多いが、Next.js以外のフレームワーク（Astro、Hugo、Gatsby）との相性が良い。",
+    "metadata": { "service": "Netlify", "category": "hosting", "pricing": "free-tier-available" }
+  },
+  {
+    "id": "flyio-overview",
+    "text": "Fly.ioはDockerコンテナをグローバルにデプロイできるPaaS。東京リージョンあり。PostgreSQL、Redis、LiteFS（分散SQLite）をマネージドで提供。WebSocket、長時間実行プロセス、バックグラウンドジョブに対応。無料枠はVM 3台分（shared-cpu-1x, 256MB RAM）。コンテナベースなので、RailsでもDjangoでもGoでも何でもデプロイできる。",
+    "metadata": { "service": "Fly.io", "category": "container-hosting", "pricing": "free-tier-available" }
+  },
+  {
+    "id": "flyio-database",
+    "text": "Fly.ioのPostgreSQLはリージョンを選んでワンコマンドで作成できる。東京リージョン（nrt）に置けばレイテンシが低い。リードレプリカを別リージョンに配置して、ユーザーに近い場所から読み取る構成も可能。バックアップは自動で取られる。無料枠はPostgreSQL 1台（1GB RAM、10GBストレージ）。",
+    "metadata": { "service": "Fly.io", "category": "database", "pricing": "free-tier-available" }
+  },
+  {
+    "id": "railway-overview",
+    "text": "Railwayはgit pushでデプロイできるPaaS。Herokuの代替として人気が出た。PostgreSQL、MySQL、Redis、MongoDBをワンクリックで追加できる。環境変数の管理が直感的で、チーム開発にも対応。月$5のクレジットが無料で付くが、完全無料枠はない（2023年に廃止）。Hobbyプランは月$5から。",
+    "metadata": { "service": "Railway", "category": "container-hosting", "pricing": "paid" }
+  },
+  {
+    "id": "render-overview",
+    "text": "Renderは静的サイト、Webサービス、バックグラウンドワーカー、cronジョブ、PostgreSQLを提供するクラウドプラットフォーム。静的サイトは完全無料。Webサービスの無料枠は月750時間だが、15分間アクセスがないとスリープする（コールドスタートあり）。有料プランは月$7から。Herokuからの移行ガイドが公式にあり、乗り換えやすい。",
+    "metadata": { "service": "Render", "category": "container-hosting", "pricing": "free-tier-available" }
+  },
+  {
+    "id": "supabase-overview",
+    "text": "SupabaseはFirebaseのオープンソース代替。PostgreSQLベースで、リアルタイムサブスクリプション、認証、ストレージ、Edge Functionsを提供する。管理画面からテーブルをGUIで操作できる。RLS（Row Level Security）でAPIレベルの認可を設定可能。無料枠はプロジェクト2つ、500MBのDB、1GBのストレージ。",
+    "metadata": { "service": "Supabase", "category": "backend-as-a-service", "pricing": "free-tier-available" }
+  },
+  {
+    "id": "supabase-auth",
+    "text": "Supabaseの認証機能はメール・パスワード、OAuth（Google、GitHub、Twitter等）、マジックリンク、電話番号認証に対応。JWTトークンベースで、RLSと組み合わせると「このユーザーは自分のデータしか読めない」というルールをDB側で強制できる。フロントエンドのSDKが充実していて、React、Next.js、Flutter、Swiftから簡単に使える。",
+    "metadata": { "service": "Supabase", "category": "authentication", "pricing": "free-tier-available" }
+  },
+  {
+    "id": "aws-amplify",
+    "text": "AWS AmplifyはAWSのフロントエンド向けホスティング＋バックエンド構築ツール。Next.js、React、Vue、Angularに対応。Cognitoで認証、AppSyncでGraphQL API、S3でストレージ、DynamoDBでデータベースを提供。AWSの豊富なサービスと統合できるが、設定が複雑でロックインも強い。無料枠は12ヶ月間、月1000分のビルド時間。",
+    "metadata": { "service": "AWS Amplify", "category": "hosting", "pricing": "free-tier-available" }
+  },
+  {
+    "id": "pricing-comparison",
+    "text": "個人開発のホスティング費用を最小化するなら、静的サイトはCloudflare Pages（完全無料・帯域無制限）、APIサーバーはFly.io（無料枠3VM）、データベースはSupabase（無料枠500MB）の組み合わせが最安。年間0円で運用できる。商用サービスならVercel Pro（月$20）+ PlanetScale or Supabase Pro（月$25）が定番構成。月$50以内でスケーラブルな構成が組める。",
+    "metadata": { "service": "comparison", "category": "pricing", "pricing": "various" }
+  },
+  {
+    "id": "static-vs-ssr",
+    "text": "静的サイト（SSG）はビルド時にHTMLを生成するのでCDNに載せれば最速。ブログ、ドキュメントサイト、LPに最適。SSR（サーバーサイドレンダリング）はリクエストごとにHTMLを生成するので、ユーザーごとに内容が変わるページ（ダッシュボード、SNSのフィード）に向く。SSGはCloudflare Pages、Netlifyが得意。SSRはVercel、Fly.ioが得意。",
+    "metadata": { "service": "comparison", "category": "architecture", "pricing": "various" }
+  },
+  {
+    "id": "domain-ssl",
+    "text": "カスタムドメインの設定とSSL証明書は、主要なホスティングサービスならどこでも無料で提供される。Cloudflareはネームサーバーを移管すると自動でSSLが有効になり、DDoS防御やCDNも付く。ドメイン自体の取得費用は年$10〜15（.comの場合）。Cloudflare Registrarは卸値でドメインを提供しているので最安クラス。",
+    "metadata": { "service": "Cloudflare", "category": "domain", "pricing": "paid" }
+  },
+  {
+    "id": "ci-cd",
+    "text": "GitHub Actionsは公開リポジトリなら無制限、プライベートリポジトリでも月2000分の無料枠がある。Vercel、Netlify、Cloudflare PagesはGitHub連携でpushのたびに自動デプロイされるので、別途CIを組む必要がない。テスト実行だけGitHub Actionsで回して、デプロイはホスティング側に任せる構成がシンプル。",
+    "metadata": { "service": "comparison", "category": "ci-cd", "pricing": "free-tier-available" }
+  }
+]

@@ -1,0 +1,23 @@
+## Chroma search.js 実行結果（2026-03-16）
+
+### クエリ: "無料でサイトを公開したい"
+
+#1 [スコア: -0.0796] pricing-comparison
+   個人開発のホスティング費用を最小化するなら、静的サイトはCloudflare Pages（完全無料・帯域無制限）、APIサーバーはFly.io（無料枠3VM）、データベースはSupabase（無料枠5...
+   メタデータ: {"pricing":"various","service":"comparison","category":"pricing"}
+
+#2 [スコア: -0.1686] static-vs-ssr
+   静的サイト（SSG）はビルド時にHTMLを生成するのでCDNに載せれば最速。ブログ、ドキュメントサイト、LPに最適。SSR（サーバーサイドレンダリング）はリクエストごとにHTMLを生成するので、ユーザ...
+   メタデータ: {"service":"comparison","pricing":"various","category":"architecture"}
+
+#3 [スコア: -0.1746] render-overview
+   Renderは静的サイト、Webサービス、バックグラウンドワーカー、cronジョブ、PostgreSQLを提供するクラウドプラットフォーム。静的サイトは完全無料。Webサービスの無料枠は月750時間だ...
+   メタデータ: {"service":"Render","category":"container-hosting","pricing":"free-tier-available"}
+
+#4 [スコア: -0.2055] ci-cd
+   GitHub Actionsは公開リポジトリなら無制限、プライベートリポジトリでも月2000分の無料枠がある。Vercel、Netlify、Cloudflare PagesはGitHub連携でpush...
+   メタデータ: {"pricing":"free-tier-available","service":"comparison","category":"ci-cd"}
+
+#5 [スコア: -0.2713] netlify-overview
+   NetlifyはJamstackの先駆者的ホスティング。静的サイト、SPA、SSRに対応。フォーム処理、認証、サーバレス関数が組み込みで使える。無料枠は月100GBの帯域と300分のビルド時間。Ver...
+   メタデータ: {"service":"Netlify","category":"hosting","pricing":"free-tier-available"}

@@ -1,0 +1,44 @@
+# 3DB比較結果（2026-03-19）
+
+同じデータ（ホスティング選定ナレッジ16件）・同じEmbedding（Voyage AI voyage-3-lite）・同じクエリで検索
+
+## クエリ: 「無料でサイトを公開したい」
+
+| 順位 | Chroma | pgvector | Pinecone |
+|------|--------|----------|----------|
+| 1 | pricing-comparison (-0.0796) | pricing-comparison (0.4602) | pricing-comparison (0.4598) |
+| 2 | static-vs-ssr (-0.1686) | static-vs-ssr (0.4157) | static-vs-ssr (0.4159) |
+| 3 | render-overview (-0.1746) | render-overview (0.4127) | render-overview (0.4120) |
+
+## クエリ: 「Dockerコンテナをデプロイしたい」
+
+| 順位 | Chroma | pgvector | Pinecone |
+|------|--------|----------|----------|
+| 1 | flyio-overview (0.0375) | flyio-overview (0.5187) | flyio-overview (0.5187) |
+| 2 | ci-cd (-0.1823) | ci-cd (0.4088) | ci-cd (0.4085) |
+| 3 | vercel-overview (-0.2147) | vercel-overview (0.3927) | vercel-overview (0.3930) |
+
+## クエリ: 「認証機能が欲しい」
+
+| 順位 | Chroma | pgvector | Pinecone |
+|------|--------|----------|----------|
+| 1 | supabase-auth (0.0189) | supabase-auth (0.5095) | supabase-auth (0.5097) |
+| 2 | domain-ssl (-0.4811) | domain-ssl (0.2595) | domain-ssl (0.2598) |
+| 3 | flyio-database (-0.4986) | flyio-database (0.2507) | flyio-database (0.2507) |
+
+## クエリ: 「Next.jsアプリを本番運用したい」
+
+| 順位 | Chroma | pgvector | Pinecone |
+|------|--------|----------|----------|
+| 1 | vercel-overview (-0.0082) | vercel-overview (0.4959) | vercel-overview (0.4962) |
+| 2 | netlify-overview (-0.1772) | netlify-overview (0.4114) | netlify-overview (0.4112) |
+| 3 | aws-amplify (-0.1863) | aws-amplify (0.4069) | aws-amplify (0.4066) |
+
+## クエリ: 「お金をかけたくない」
+
+| 順位 | Chroma | pgvector | Pinecone |
+|------|--------|----------|----------|
+| 1 | render-overview (-0.6189) | render-overview (0.1906) | render-overview (0.1907) |
+| 2 | pricing-comparison (-0.6234) | pricing-comparison (0.1883) | pricing-comparison (0.1880) |
+| 3 | ci-cd (-0.6478) | ci-cd (0.1761) | ci-cd (0.1765) |
+

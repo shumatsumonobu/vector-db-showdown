@@ -1,0 +1,10 @@
+{
+  "name": "vector-db-showdown",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "dependencies": {
+    "chromadb": "^1.9.2",
+    "pg": "^8.16.0",
+    "@pinecone-database/pinecone": "^7.1.0"
+  }
+}
